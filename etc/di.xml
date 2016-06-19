@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <preference for="Magento\Catalog\Block\Product\View\Gallery" type="Klymko\ProductImageSlider\Block\Product\View\Gallery" />
+    <preference for="Magento\Catalog\Block\Product\ImageBuilder" type="Klymko\ProductImageSlider\Block\Product\ImageBuilder" />
+    <!-- <preference for="Magento\Catalog\Block\Product\Image" type="Klymko\ProductImageSlider\Block\Product\Image" /> -->
+</config>

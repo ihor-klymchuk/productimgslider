@@ -1,0 +1,61 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php /** @var $block \Magento\Catalog\Block\Product\Image */ ?>
+<?php $productId = $this->getProduct()->getId(); ?>
+
+<div class="gallery-placeholder _block-content-loading" data-gallery-role="gallery-placeholder-<?php echo $productId; ?>">
+    <div data-role="loader" class="loading-mask">
+        <div class="loader">
+            <img src="<?php /* @escapeNotVerified */ echo $block->getViewFileUrl('images/loader-1.gif'); ?>"
+                 alt="<?php /* @escapeNotVerified */ echo __('Loading...') ?>">
+        </div>
+    </div>
+</div>
+
+<?php $gallery = $block->getGalleryBlock(); ?>
+
+<script type="text/x-magento-init">
+    {
+        "[data-gallery-role=gallery-placeholder-<?php echo $productId; ?>]": {
+            "mage/gallery/gallery": {
+                "mixins":["magnifier/magnify"],
+                "magnifierOpts": <?php /* @escapeNotVerified */ echo $gallery->getMagnifier(); ?>,
+                "data": <?php /* @escapeNotVerified */ echo $gallery->getGalleryImagesJson(); ?>,
+                "options": {
+                    "nav": "<?php /* @escapeNotVerified */ echo $block->getTemplateConfig("options", "nav"); ?>",
+                    "loop": <?php /* @escapeNotVerified */ echo $block->getTemplateConfig("options", "loop"); ?>,
+                    "keyboard": <?php /* @escapeNotVerified */ echo $block->getTemplateConfig("options", "keyboard"); ?>,
+                    "arrows": <?php /* @escapeNotVerified */ echo $block->getTemplateConfig("options", "arrows"); ?>,
+                    "allowfullscreen": <?php /* @escapeNotVerified */ echo $block->getTemplateConfig("options","allowfullscreen"); ?>,
+                    "showCaption": <?php /* @escapeNotVerified */ echo $block->getTemplateConfig("options", "caption"); ?>,
+                    "width": <?php /* @escapeNotVerified */ echo $block->getResizedImageWidth() ?>,
+
+                    <?php /* I remove thumb width. U can get it from product/view/fotorama.phtml */ ?>
+
+                    "height": <?php /* @escapeNotVerified */ echo $block->getResizedImageHeight(); ?>,
+                    "transitionduration": <?php /* @escapeNotVerified */  echo $block->getTemplateConfig("options","transitionduration"); ?>,
+                    "transition": "<?php /* @escapeNotVerified */  echo $block->getTemplateConfig("options","transition"); ?>",
+                    "navarrows": <?php /* @escapeNotVerified */  echo $block->getTemplateConfig("options","navarrows"); ?>,
+                    "navtype": "<?php /* @escapeNotVerified */  echo $block->getTemplateConfig("options","navtype"); ?>",
+                    "navdir": "<?php /* @escapeNotVerified */  echo $block->getTemplateConfig("options","navdir"); ?>"
+                },
+                "fullscreen": {
+                    "nav": "<?php /* @escapeNotVerified */  echo $block->getTemplateConfig("fullscreen", "nav"); ?>",
+                    "loop": <?php /* @escapeNotVerified */  echo $block->getTemplateConfig("fullscreen", "loop"); ?>,
+                    "navdir": "<?php /* @escapeNotVerified */  echo $block->getTemplateConfig("fullscreen", "navdir"); ?>",
+                    "arrows": <?php /* @escapeNotVerified */  echo $block->getTemplateConfig("fullscreen", "arrows"); ?>,
+                    "showCaption": <?php /* @escapeNotVerified */  echo $block->getTemplateConfig("fullscreen", "caption"); ?>,
+                    "transitionduration": <?php /* @escapeNotVerified */  echo $block->getTemplateConfig("fullscreen", "transitionduration"); ?>,
+                    "transition": "<?php /* @escapeNotVerified */  echo $block->getTemplateConfig("fullscreen", "transition"); ?>"
+                },
+                "breakpoints": <?php /* @escapeNotVerified */ echo $gallery->getBreakpoints(); ?>
+            },
+
+            "productImgSliderProductList": {}
+        }
+    }
+</script>

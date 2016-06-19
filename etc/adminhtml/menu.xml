@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Klymko_ProductImageSlider::module" title="Product Image Slider" module="Klymko_ProductImageSlider" sortOrder="60" dependsOnModule="Klymko_ProductImageSlider" resource="Klymko_ProductImageSlider::module"/>
+        <add id="Klymko_ProductImageSlider::template" title="Sliders" module="Klymko_ProductImageSlider" sortOrder="10" parent="Klymko_ProductImageSlider::module" action="productimgslider/template/index" resource="Klymko_ProductImageSlider::template"/>
+        <add id="Klymko_ProductImageSlider::configuration" title="Configuration" module="Klymko_ProductImageSlider" sortOrder="20" parent="Klymko_ProductImageSlider::module" action="adminhtml/system_config/edit/section/productimgslider" resource="Klymko_ProductImageSlider::configuration"/>
+    </menu>
+</config>

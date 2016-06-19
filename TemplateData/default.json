@@ -1,0 +1,202 @@
+{
+    "options": {
+        "nav": {
+            "title": "Gallery navigation style",
+            "default": "thumbs",
+            "params": [{
+                "value": false,
+                "title": "None"
+            }, {
+                "value": "thumbs",
+                "title": "Thumbnails"
+            }, {
+                "value": "dots",
+                "title": "Dots"
+            }]
+        },
+        "loop": {
+            "title": "Gallery navigation loop",
+            "default": true,
+            "params": [{
+                "value": true,
+                "title": "Yes"
+            }, {
+                "value": false,
+                "title": "No"
+            }]
+        },
+        "keyboard": {
+            "title": "Turn on/off keyboard arrows navigation",
+            "default": true,
+            "params": [{
+                "value": true,
+                "title": "Yes"
+            }, {
+                "value": false,
+                "title": "No"
+            }]
+        },
+        "arrows": {
+            "title": "Turn on/off arrows on the sides preview",
+            "default": false,
+            "params": [{
+                "value": true,
+                "title": "Yes"
+            }, {
+                "value": false,
+                "title": "No"
+            }]
+        },
+        "allowfullscreen": {
+            "title": "Turn on/off fullscreen",
+            "default": true,
+            "params": [{
+                "value": true,
+                "title": "Yes"
+            }, {
+                "value": false,
+                "title": "No"
+            }]
+        },
+        "caption": {
+            "title": "Display alt text as image title",
+            "default": false,
+            "params": [{
+                "value": true,
+                "title": "Yes"
+            }, {
+                "value": false,
+                "title": "No"
+            }]
+        },
+        "transitionduration": {
+            "title": "Sets transition duration in ms",
+            "default": 500
+        },
+        "transition": {
+            "title": "Sets transition effect for slides changing",
+            "default": "slide",
+            "params": [{
+                "value": "slide",
+                "title": "Slide"
+            }, {
+                "value": "crossfade",
+                "title": "Crossfade"
+            }, {
+                "value": "dissolve",
+                "title": "Dissolve"
+            }]
+        },
+        "navarrows": {
+            "title": "Turn on/off on the thumbs navigation sides",
+            "default": true,
+            "params": [{
+                "value": true,
+                "title": "Yes"
+            }, {
+                "value": false,
+                "title": "No"
+            }]
+        },
+        "navtype": {
+            "title": "Sliding type of thumbnails",
+            "default": "slides",
+            "params": [{
+                "value": "slides",
+                "title": "Slide"
+            }, {
+                "value": "thumbs",
+                "title": "Thumbnails"
+            }]
+        },
+        "navdir": {
+            "title": "Sliding direction of thumbnails",
+            "default": "horizontal",
+            "params": [{
+                "value": "horizontal",
+                "title": "Horizontal"
+            }, {
+                "value": "vertical",
+                "title": "Vertical"
+            }]
+        }
+    },
+    "fullscreen": {
+        "nav": {
+            "title": "Fullscreen navigation style",
+            "default": "thumbs",
+            "params": [{
+                "value": false,
+                "title": "None"
+            }, {
+                "value": "thumbs",
+                "title": "Thumbnails"
+            }, {
+                "value": "dots",
+                "title": "Dots"
+            }]
+        },
+        "loop": {
+            "title": "Fullscreen navigation loop",
+            "default": true,
+            "params": [{
+                "value": true,
+                "title": "Yes"
+            }, {
+                "value": false,
+                "title": "No"
+            }]
+        },
+        "navdir": {
+            "title": "Sliding direction of thumbnails in full screen",
+            "default": "horizontal",
+            "params": [{
+                "title": "Horizontal",
+                "value": "horizontal"
+            }, {
+                "title": "Vertical",
+                "value": "vertical"
+            }]
+        },
+        "arrows": {
+            "title": "Turn on/off arrows on the sides preview",
+            "default": false,
+            "params": [{
+                "title": "Yes",
+                "value": true
+            }, {
+                "title": "No",
+                "value": false
+            }]
+        },
+        "caption": {
+            "title": "Display alt text as image title",
+            "default": false,
+            "params": [{
+                "title": "Yes",
+                "value": true
+            }, {
+                "title": "No",
+                "value": false
+            }]
+        },
+        "transitionduration": {
+            "title": "Sets transition duration in ms",
+            "default": 500
+        },
+        "transition": {
+            "title": "Sets transition effect for slides changing",
+            "default": "dissolve",
+            "params": [{
+                "value": "slide",
+                "title": "Slide"
+            }, {
+                "value": "crossfade",
+                "title": "Crossfade"
+            }, {
+                "value": "dissolve",
+                "title": "Dissolve"
+            }]
+        }
+    }
+}

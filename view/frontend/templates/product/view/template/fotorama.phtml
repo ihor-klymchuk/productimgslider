@@ -1,0 +1,49 @@
+<div class="gallery-placeholder _block-content-loading" data-gallery-role="gallery-placeholder">
+    <div data-role="loader" class="loading-mask">
+        <div class="loader">
+            <img src="<?php /* @escapeNotVerified */ echo $block->getViewFileUrl('images/loader-1.gif'); ?>"
+                 alt="<?php /* @escapeNotVerified */ echo __('Loading...') ?>">
+        </div>
+    </div>
+</div>
+<?php $template = $block->getTemplateBlock()->getSelectedBlock();?>
+<script type="text/x-magento-init">
+    {
+        "[data-gallery-role=gallery-placeholder]": {
+            "mage/gallery/gallery": {
+                "mixins":["magnifier/magnify"],
+                "magnifierOpts": <?php /* @escapeNotVerified */ echo $block->getMagnifier(); ?>,
+                "data": <?php /* @escapeNotVerified */ echo $block->getGalleryImagesJson(); ?>,
+                "options": {
+                    "nav": "<?php /* @escapeNotVerified */ echo $template->getTemplateConfig("options", "nav"); ?>",
+                    "loop": <?php /* @escapeNotVerified */ echo $template->getTemplateConfig("options", "loop"); ?>,
+                    "keyboard": <?php /* @escapeNotVerified */ echo $template->getTemplateConfig("options", "keyboard"); ?>,
+                    "arrows": <?php /* @escapeNotVerified */ echo $template->getTemplateConfig("options", "arrows"); ?>,
+                    "allowfullscreen": <?php /* @escapeNotVerified */ echo $template->getTemplateConfig("options","allowfullscreen"); ?>,
+                    "showCaption": <?php /* @escapeNotVerified */ echo $template->getTemplateConfig("options", "caption"); ?>,
+                    "width": <?php /* @escapeNotVerified */ echo $block->getImageAttribute('product_page_image_medium', 'width'); ?>,
+                    "thumbwidth": <?php /* @escapeNotVerified */ echo $block->getImageAttribute('product_page_image_small', 'width'); ?>,
+                    "thumbheight": <?php /* @escapeNotVerified */ echo $block->getImageAttribute('product_page_image_small', 'height')
+                        ?: $block->getImageAttribute('product_page_image_small', 'width'); ?>,
+                    "height": <?php /* @escapeNotVerified */ echo $block->getImageAttribute('product_page_image_medium', 'height')
+                        ?: $block->getImageAttribute('product_page_image_medium', 'width'); ?>,
+                    "transitionduration": <?php /* @escapeNotVerified */  echo $template->getTemplateConfig("options","transitionduration"); ?>,
+                    "transition": "<?php /* @escapeNotVerified */  echo $template->getTemplateConfig("options","transition"); ?>",
+                    "navarrows": <?php /* @escapeNotVerified */  echo $template->getTemplateConfig("options","navarrows"); ?>,
+                    "navtype": "<?php /* @escapeNotVerified */  echo $template->getTemplateConfig("options","navtype"); ?>",
+                    "navdir": "<?php /* @escapeNotVerified */  echo $template->getTemplateConfig("options","navdir"); ?>"
+                },
+                "fullscreen": {
+                    "nav": "<?php /* @escapeNotVerified */  echo $template->getTemplateConfig("fullscreen", "nav"); ?>",
+                    "loop": <?php /* @escapeNotVerified */  echo $template->getTemplateConfig("fullscreen", "loop"); ?>,
+                    "navdir": "<?php /* @escapeNotVerified */  echo $template->getTemplateConfig("fullscreen", "navdir"); ?>",
+                    "arrows": <?php /* @escapeNotVerified */  echo $template->getTemplateConfig("fullscreen", "arrows"); ?>,
+                    "showCaption": <?php /* @escapeNotVerified */  echo $template->getTemplateConfig("fullscreen", "caption"); ?>,
+                    "transitionduration": <?php /* @escapeNotVerified */  echo $template->getTemplateConfig("fullscreen", "transitionduration"); ?>,
+                    "transition": "<?php /* @escapeNotVerified */  echo $template->getTemplateConfig("fullscreen", "transition"); ?>"
+                },
+                "breakpoints": <?php /* @escapeNotVerified */ echo $block->getBreakpoints(); ?>
+            }
+        }
+    }
+</script>

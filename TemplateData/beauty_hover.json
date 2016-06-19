@@ -1,0 +1,14 @@
+{
+	"options": {
+		"effects": {
+			"title": "Hover effect",
+			"params": [{
+				"value": "grow",
+				"title": "Grow"
+			}, {
+				"value": "shrink",
+				"title": "Shrink"
+			}]
+		}
+	}
+}

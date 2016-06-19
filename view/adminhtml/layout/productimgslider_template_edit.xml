@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etcpage_configuration.xsd">
+
+    <body>
+        <referenceContainer name="content">
+            <block class="Klymko\ProductImageSlider\Block\Adminhtml\Template\Edit" name="productimgslider.template.edit" />
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="Klymko\ProductImageSlider\Block\Adminhtml\Template\Edit\Tabs" name="productimgslider.template.edit.tabs">
+                <block class="Klymko\ProductImageSlider\Block\Adminhtml\Template\Edit\Tab\Main" name="productimgslider.template.edit.tab.main"/>
+                <block class="Klymko\ProductImageSlider\Block\Adminhtml\Template\Edit\Tab\Config" name="productimgslider.template.edit.tab.config"/>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">main_section</argument>
+                    <argument name="block" xsi:type="string">productimgslider.template.edit.tab.main</argument>
+                </action>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">config</argument>
+                    <argument name="block" xsi:type="string">productimgslider.template.edit.tab.config</argument>
+                </action>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
